@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
- * main - This program determines if a random number is positive, negative, or zero.
+/**
+ * main - Entry Point
  *
  * Return: 0 (Success)
  */
