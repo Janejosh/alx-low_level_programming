@@ -1,20 +1,22 @@
 #include <stdio.h>
+
 /**
  * main - Entry Point
  *
  * Return: 0 (Success)
  */
+
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
-	
-	for (i = 0; i < 26; i++)
+	char c;
+
+        c = 'a';
+	while 
+		(c <= 'z')
 	{
-		putchar(alp[i]);
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	reture 0;
 }
-		
-
