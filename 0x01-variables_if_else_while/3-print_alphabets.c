@@ -10,6 +10,7 @@ int main(void)
 	char b;
 
 	char d;
+
 	b = 'a';
 	d = 'A';
 	while
