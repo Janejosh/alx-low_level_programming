@@ -4,6 +4,7 @@
 /**
  * _atoi - A function that convert a string to an integer
  * @s: String to be checked
+ * Return: The integer converted from the string
  */
 
 int _atoi(char *s)
