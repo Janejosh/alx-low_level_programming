@@ -62,8 +62,7 @@ char **strtow(char *str)
 	if (*str == ' ')
 		str++;
 	else
-	{
-		new_word = str;
+	{ new_word = str;
 	for (; *str != ' ' && *str != '\0';)
 	{
 		len++;
@@ -71,10 +70,8 @@ char **strtow(char *str)
 	}
 	words[a] = malloc(sizeof(char) * (len + 1));
 	if (words[a] == 0)
-	{
-		free_everything(words, a);
-		return (NULL);
-	}
+	{ free_everything(words, a);
+		return (NULL); }
 	while (*new_word != ' ' && *new_word != '\0')
 	{
 		words[a][b] = *new_word;
