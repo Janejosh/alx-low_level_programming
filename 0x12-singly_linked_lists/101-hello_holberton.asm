@@ -11,11 +11,11 @@ main:
 		push rbp
 
     		mov rdi,format  	; The first argument (format) is the format string
-    		mov rsi,message   	; The second argument (string) is the message
+		mov rsi,message   	; The second argument (string) is the message
     		mov rax,0     		; Clear RAX register for the varargs (no floating-point args)
     		call printf		; Call C function
 
     		pop rbp      		; restore stack
-    
-    		mov rax,0    		; normal, no error, return value
+
+		mov rax,0    		; normal, no error, return value
 		ret      		; return
