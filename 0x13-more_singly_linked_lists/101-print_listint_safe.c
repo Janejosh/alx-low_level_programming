@@ -12,34 +12,34 @@ size_t count_looped_listint_len(const listint_t *head);
 
 size_t count_looped_listint_len(const listint_t *head)
 {
-	const listint_t *nigeria, *africa;
+	const listint_t *tortoise, *hare;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
-	nigeria = head->next;
-	africa = (head->next)->next;
-	while (africa)
+	tortoise = head->next;
+	hare = (head->next)->next;
+	while (hare)
 	{
-		if (nigeria == africa)
+		if (tortoise == hare)
 		{
-			nigeria = head;
-			while (nigeria != africa)
+			tortoise = head;
+			while (tortoise != hare)
 			{
 				nodes++;
-				nigeria = nigeria->next;
-				africa = africa->next;
+				tortoise = tortoise->next;
+				hare = hare->next;
 			}
-			nigeria = nigeria->next;
-			while (nigeria != africa)
+			tortoise = tortoise->next;
+			while (tortoise != hare)
 			{
 				nodes++;
-				nigeria = nigeria->next;
+				tortoise = tortoise->next;
 			}
 			return (nodes);
 		}
-	nigeria = nigeria->next;
-	africa = (africa->next)->next;
+	tortoise = tortoise->next;
+	hare = (hare->next)->next;
 	}
 	return (0);
 }
@@ -59,7 +59,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		for (; head != NULL; nodes++)
 		{
-			printf("[%p]%d\n", (void *)head, head->n);
+			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
 	}
@@ -67,10 +67,10 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		for (index = 0; index < nodes; index++)
 		{
-			printf("[%p]%d\n", (void *)head, head->n);
+			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
 		}
-		printf("-> [%p]%d\n", (void *)head, head->n);
+		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 	return (nodes);
 }
